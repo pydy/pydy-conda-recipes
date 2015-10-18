@@ -1,22 +1,23 @@
 This repository contains all of the recipes used to build the packages at
-http://www.anaconda.org/pydy.
+http://anaconda.org/pydy.
 
 PyDy Build Example
 ==================
 
 For each release of PyDy we upload binaries for the conda package manager to
-binstar for easy installation using conda. For every conda package there should
-be a directory containing at least three files: ``meta.yaml``, ``bld.bat``, and
-``build.sh``. The directory should be named as such ``pydy-X.X.X`` where
-``X.X.X`` is the PEP 440 compliant version number. For instructions on
-building a conda package see the conda documentation: http://conda.pydata.org.
+anaconda.org for easy installation using conda. For every conda package there
+should be a directory containing at least three files: ``meta.yaml``,
+``bld.bat``, and ``build.sh``. The directory should be named as such
+``pydy-X.X.X`` where ``X.X.X`` is the PEP 440 compliant version number. For
+instructions on building a conda package see the conda documentation:
+http://conda.pydata.org.
 
 The basic process for creating and uploading a new package is as follows:
 
 Install the needed packages::
 
    $ conda update conda
-   $ conda install conda-build binstar
+   $ conda install conda-build anaconda-client
 
 Create a new directory for the PyDy version and copy the files from the
 previous version (or use ``conda skeleton pypi pydy``)::
