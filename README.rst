@@ -1,5 +1,5 @@
 This repository contains all of the recipes used to build the packages at
-http://www.ananconda.org/pydy.
+http://www.anaconda.org/pydy.
 
 PyDy Build Example
 ==================
