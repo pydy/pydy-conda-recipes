@@ -1,0 +1,33 @@
+package:
+    name: cython
+    version: "0.20.2"
+
+source:
+    fn: Cython-0.20.2.tar.gz
+    url: http://cython.org/release/Cython-0.20.2.tar.gz
+    md5: 7fc13e1c665bdf7cea19ad08906af91f
+
+build:
+    number: 0
+    string: py{{ py }}_0
+
+requirements:
+    build:
+        - gcc
+        - libgcc
+        - python 2.7* # [py27]
+        - python 3.3* # [py33]
+        - python 3.4* # [py34]
+        - python 3.5* # [py35]
+        - setuptools
+    run:
+        - gcc
+        - python 2.7* # [py27]
+        - python 3.3* # [py33]
+        - python 3.4* # [py34]
+        - python 3.5* # [py35]
+
+about:
+  home: http://www.cython.org
+  license: Apache License
+  summary: 'The Cython compiler for writing C extensions for the Python language.'
