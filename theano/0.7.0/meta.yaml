@@ -1,0 +1,68 @@
+package:
+  name: theano
+  version: 0.7.0
+
+source:
+  fn: Theano-0.7.0.tar.gz
+  url: https://pypi.python.org/packages/source/T/Theano/Theano-0.7.0.tar.gz
+  md5: 099a9575801b71252b5bbbc3c34ed45a
+
+build:
+  number: 0
+  string: np{{ np }}py{{ py }}_0
+
+requirements:
+  build:
+    - python 2.7* # [py27]
+    - python 3.3* # [py33]
+    - python 3.4* # [py34]
+    - python 3.5* # [py35]
+    - setuptools
+    - numpy 1.7*
+    - scipy
+
+  run:
+    - python
+    - numpy 1.7*
+    - scipy
+
+test:
+  imports:
+    - theano.scan_module
+    - theano.tensor.nnet
+    - theano.misc
+    - theano.sandbox.gpuarray
+    - theano.tensor.signal
+    - theano.scalar.tests
+    - theano.sparse
+    - theano.compile.sandbox
+    - theano.compile
+    - theano.sparse.sandbox
+    - theano.sandbox.linalg
+    - theano.sandbox.scan_module.tests
+    - theano.tensor.deprecated
+    - theano.gof
+    - theano.compat
+    - theano.tensor.nnet.tests
+    - theano.scalar
+    - theano.sandbox.cuda.tests
+    - theano.sandbox.cuda
+    - theano.tensor.tests
+    - theano.tensor.signal.tests
+    - theano
+    - theano.sandbox.gpuarray.tests
+    - theano.sandbox.scan_module
+    - theano.misc.tests
+    - theano.compile.tests
+    - theano.sandbox.linalg.tests
+    - theano.sandbox
+    - theano.gof.tests
+    - theano.sparse.tests
+    - theano.scan_module.tests
+    - theano.tests
+    - theano.tensor
+
+about:
+  home: http://deeplearning.net/software/theano/
+  license: BSD License
+  summary: 'Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.'
