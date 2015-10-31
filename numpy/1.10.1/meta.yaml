@@ -1,0 +1,33 @@
+package:
+  name: numpy
+  version: 1.10.1
+
+source:
+  fn: numpy-1.10.1.tar.gz
+  url: https://pypi.python.org/packages/source/n/numpy/numpy-1.10.1.tar.gz
+  md5: 3fed2b50906bc19018cec5fa26168aa5
+
+requirements:
+  build:
+    - python
+    - libgfortran
+    - openblas
+
+  run:
+    - python
+    - libgfortran
+    - openblas
+
+build:
+  string: py{{py}}_0
+
+test:
+  requires:
+    - nose
+  imports:
+    - numpy
+    - numpy.linalg.lapack_lite
+
+about:
+  home: https://www.numpy.org
+  license: BSD

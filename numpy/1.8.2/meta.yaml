@@ -1,0 +1,33 @@
+package:
+  name: numpy
+  version: 1.8.2
+
+source:
+  fn: numpy-1.8.2.tar.gz
+  url: https://pypi.python.org/packages/source/n/numpy/numpy-1.8.2.tar.gz
+  md5: cdd1a0d14419d8a8253400d8ca8cba42
+
+requirements:
+  build:
+    - python
+    - libgfortran
+    - openblas
+
+  run:
+    - python
+    - libgfortran
+    - openblas
+
+build:
+  string: py{{py}}_0
+
+test:
+  requires:
+    - nose
+  imports:
+    - numpy
+    - numpy.linalg.lapack_lite
+
+about:
+  home: https://www.numpy.org
+  license: BSD
