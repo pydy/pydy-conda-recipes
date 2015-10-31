@@ -1,3 +1,4 @@
 #!/bin/bash
 
-$PYTHON setup.py install
+N=$(nproc)
+$PYTHON setup.py build -j $N install
