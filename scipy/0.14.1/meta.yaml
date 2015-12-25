@@ -13,7 +13,7 @@ requirements:
     - libgfortran
     - openblas
     - python
-    - numpy
+    - numpy x.x
 
   run:
     - python
