@@ -1,0 +1,27 @@
+package:
+    name: cython
+    version: 0.23.4
+
+source:
+    fn: Cython-0.23.4.tar.gz
+    url: https://pypi.python.org/packages/source/C/Cython/Cython-0.23.4.tar.gz
+    md5: 157df1f69bcec6b56fd97e0f2e057f6e
+
+build:
+    number: 0
+    string: py{{ py }}_0
+
+requirements:
+    build:
+        - gcc
+        - libgcc
+        - python
+        - setuptools
+    run:
+        - gcc
+        - python
+
+about:
+  home: http://www.cython.org
+  license: Apache License
+  summary: 'The Cython compiler for writing C extensions for the Python language.'

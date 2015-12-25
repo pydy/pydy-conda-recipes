@@ -1,0 +1,26 @@
+package:
+    name: cython
+    version: "0.17.4"
+
+source:
+    fn: Cython-0.17.4.tar.gz
+    url: https://pypi.python.org/packages/source/C/Cython/Cython-0.17.4.tar.gz
+    md5: cb11463e3a0c8d063e578db64ff61dde
+
+build:
+    number: 0
+    string: py{{ py }}_0
+
+requirements:
+    build:
+        - gcc
+        - python
+        - setuptools
+    run:
+        - gcc
+        - python
+
+about:
+  home: http://www.cython.org
+  license: Apache License
+  summary: 'The Cython compiler for writing C extensions for the Python language.'
