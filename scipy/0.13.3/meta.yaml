@@ -16,7 +16,6 @@ requirements:
     - numpy x.x
 
   run:
-    - libgfortran
     - openblas
     - python
     - numpy

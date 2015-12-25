@@ -13,50 +13,52 @@ build:
 
 requirements:
   build:
+    - gcc
     - python
     - setuptools
     - numpy x.x
-    - scipy
+    - scipy >=0.11
   run:
+    - gcc
     - python
     - numpy
-    - scipy
+    - scipy >=0.11
 
 test:
   imports:
-    - theano.scan_module
-    - theano.tensor.nnet
-    - theano.misc
-    - theano.sandbox.gpuarray
-    - theano.tensor.signal
-    - theano.scalar.tests
-    - theano.sparse
-    - theano.compile.sandbox
-    - theano.compile
-    - theano.sparse.sandbox
-    - theano.sandbox.linalg
-    - theano.sandbox.scan_module.tests
-    - theano.tensor.deprecated
-    - theano.gof
-    - theano.compat
-    - theano.tensor.nnet.tests
-    - theano.scalar
-    - theano.sandbox.cuda.tests
-    - theano.sandbox.cuda
-    - theano.tensor.tests
-    - theano.tensor.signal.tests
     - theano
-    - theano.sandbox.gpuarray.tests
-    - theano.sandbox.scan_module
-    - theano.misc.tests
+    - theano.compile
+    - theano.compile.sandbox
     - theano.compile.tests
-    - theano.sandbox.linalg.tests
-    - theano.sandbox
+    - theano.compat
+    - theano.gof
     - theano.gof.tests
-    - theano.sparse.tests
+    - theano.misc
+    - theano.misc.tests
+    - theano.sandbox
+    - theano.sandbox.cuda
+    - theano.sandbox.cuda.tests
+    - theano.sandbox.gpuarray
+    - theano.sandbox.gpuarray.tests
+    - theano.sandbox.linalg
+    - theano.sandbox.linalg.tests
+    - theano.sandbox.scan_module
+    - theano.sandbox.scan_module.tests
+    - theano.scalar
+    - theano.scalar.tests
+    - theano.scan_module
     - theano.scan_module.tests
-    - theano.tests
+    - theano.sparse
+    - theano.sparse.sandbox
+    - theano.sparse.tests
     - theano.tensor
+    - theano.tensor.deprecated
+    - theano.tensor.nnet
+    - theano.tensor.nnet.tests
+    - theano.tensor.signal
+    - theano.tensor.signal.tests
+    - theano.tensor.tests
+    - theano.tests
 
 about:
   home: http://deeplearning.net/software/theano/
