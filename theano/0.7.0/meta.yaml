@@ -13,14 +13,14 @@ build:
 
 requirements:
   build:
-    - python >=2.6,<3|>=3.3
+    - python
     - setuptools
     - numpy x.x
     - scipy
   run:
-    - python >=2.6,<3|>=3.3
-    - numpy >=1.6.2
-    - scipy >=0.11
+    - python
+    - numpy
+    - scipy
 
 test:
   imports:

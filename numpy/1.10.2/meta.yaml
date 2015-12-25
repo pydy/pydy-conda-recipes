@@ -9,13 +9,14 @@ source:
 
 requirements:
   build:
+    - gcc
     - libgfortran
     - openblas
-    - python >=2.6,<3|>=3.3
+    - python
 
   run:
     - openblas
-    - python >=2.6,<3|>=3.3
+    - python
 
 build:
   string: py{{py}}_0
