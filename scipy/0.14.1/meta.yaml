@@ -16,7 +16,7 @@ requirements:
     - numpy x.x
 
   run:
-    - python
+    - python >=2.6
     - openblas
     - numpy >=1.5.0
 
