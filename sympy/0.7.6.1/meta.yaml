@@ -22,103 +22,73 @@ test:
     - sympy
     - sympy.assumptions
     - sympy.assumptions.handlers
-    - sympy.assumptions.tests
+    - sympy.benchmarks
+    - sympy.calculus
     - sympy.categories
-    - sympy.categories.tests
     - sympy.combinatorics
-    - sympy.combinatorics.tests
     - sympy.concrete
-    - sympy.concrete.tests
     - sympy.core
-    - sympy.core.tests
+    - sympy.core.benchmarks
     - sympy.crypto
-    - sympy.crypto.tests
     - sympy.diffgeom
-    - sympy.diffgeom.tests
     - sympy.external
-    - sympy.external.tests
     - sympy.functions
     - sympy.functions.combinatorial
-    - sympy.functions.combinatorial.tests
     - sympy.functions.elementary
-    - sympy.functions.elementary.tests
+    - sympy.functions.elementary.benchmarks
     - sympy.functions.special
-    - sympy.functions.special.tests
+    - sympy.functions.special.benchmarks
     - sympy.galgebra
-    - sympy.galgebra.tests
     - sympy.geometry
-    - sympy.geometry.tests
     - sympy.integrals
-    - sympy.integrals.tests
+    - sympy.integrals.benchmarks
     - sympy.interactive
-    - sympy.interactive.tests
     - sympy.liealgebras
-    - sympy.liealgebras.tests
     - sympy.logic
     - sympy.logic.algorithms
-    - sympy.logic.tests
+    - sympy.logic.benchmarks
     - sympy.logic.utilities
     - sympy.matrices
+    - sympy.matrices.benchmarks
     - sympy.matrices.expressions
-    - sympy.matrices.expressions.tests
-    - sympy.matrices.tests
     - sympy.mpmath
     - sympy.mpmath.calculus
     - sympy.mpmath.functions
     - sympy.mpmath.libmp
     - sympy.mpmath.matrices
-    - sympy.mpmath.tests
     - sympy.ntheory
-    - sympy.ntheory.tests
     - sympy.parsing
-    - sympy.parsing.tests
     - sympy.physics
     - sympy.physics.hep
-    - sympy.physics.hep.tests
     - sympy.physics.mechanics
-    - sympy.physics.mechanics.tests
+    - sympy.physics.optics
     - sympy.physics.quantum
-    - sympy.physics.quantum.tests
-    - sympy.physics.tests
+    - sympy.physics.unitsystems
+    - sympy.physics.unitsystems.systems
+    - sympy.physics.vector
     - sympy.plotting
     - sympy.plotting.intervalmath
-    - sympy.plotting.intervalmath.tests
     - sympy.plotting.pygletplot
-    - sympy.plotting.pygletplot.tests
-    - sympy.plotting.tests
     - sympy.polys
     - sympy.polys.agca
-    - sympy.polys.agca.tests
+    - sympy.polys.benchmarks
     - sympy.polys.domains
-    - sympy.polys.domains.tests
-    - sympy.polys.tests
     - sympy.printing
     - sympy.printing.pretty
-    - sympy.printing.pretty.tests
-    - sympy.printing.tests
     - sympy.series
-    - sympy.series.tests
+    - sympy.series.benchmarks
     - sympy.sets
-    - sympy.sets.tests
     - sympy.simplify
-    - sympy.simplify.tests
     - sympy.solvers
-    - sympy.solvers.tests
-    - sympy.statistics
-    - sympy.statistics.tests
+    - sympy.solvers.benchmarks
     - sympy.stats
-    - sympy.stats.tests
     - sympy.strategies
     - sympy.strategies.branch
-    - sympy.strategies.branch.tests
-    - sympy.strategies.tests
     - sympy.tensor
-    - sympy.tensor.tests
     - sympy.unify
-    - sympy.unify.tests
     - sympy.utilities
     - sympy.utilities.mathml
-    - sympy.utilities.tests
+    - sympy.vector
 
 about:
   home: http://www.sympy.org
