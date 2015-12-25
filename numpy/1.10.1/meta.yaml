@@ -30,4 +30,5 @@ test:
 
 about:
   home: https://www.numpy.org
+  summary: "NumPy: array processing for numbers, strings, records, and objects."
   license: BSD
