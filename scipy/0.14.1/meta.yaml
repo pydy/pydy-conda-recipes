@@ -1,0 +1,41 @@
+package:
+  name: scipy
+  version: 0.14.1
+
+source:
+  fn: scipy-0.14.1.tar.gz
+  url: https://pypi.python.org/packages/source/s/scipy/scipy-0.14.1.tar.gz
+  md5: 1bfedd3197b3e3f8cd131ae2c06a1bf5
+
+requirements:
+  build:
+    - gcc
+    - libgfortran
+    - openblas
+    - python
+    - numpy
+
+  run:
+    - python
+    - openblas
+    - numpy >=1.5.0
+
+build:
+  string: np{{ np }}py{{ py }}_0
+
+test:
+  imports:
+    - scipy
+    - scipy.integrate
+    - scipy.interpolate
+    - scipy.linalg
+    - scipy.optimize
+    - scipy.signal
+    - scipy.sparse
+    - scipy.special
+    - scipy.stats
+
+about:
+  home: https://www.scipy.org
+  summary: "SciPy: Scientific Library for Python"
+  license: BSD

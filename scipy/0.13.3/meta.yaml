@@ -1,0 +1,29 @@
+package:
+  name: scipy
+  version: 0.13.3
+
+source:
+  fn: scipy-0.13.3.tar.gz
+  url: https://pypi.python.org/packages/source/s/scipy/scipy-0.13.3.tar.gz
+  md5: 0547c1f8e8afad4009cc9b5ef17a2d4d
+
+requirements:
+  build:
+    - python
+    - openblas
+    - libgfortran
+    - numpy 1.8*
+
+  run:
+    - libgcc
+    - libgfortran
+    - python
+    - openblas
+    - numpy
+
+build:
+  string: np{{ np }}py{{ py }}_0
+
+about:
+  home: https://www.scipy.org
+  license: BSD
