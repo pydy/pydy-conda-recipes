@@ -6,6 +6,8 @@ source:
   fn: sympy-0.7.4.1.tar.gz
   url: https://pypi.python.org/packages/source/s/sympy/sympy-0.7.4.1.tar.gz
   md5: 2547375b3b7eee17a3f1f4f3038c383d
+  patches:
+    - mpmath.patch
 
 requirements:
   build:
