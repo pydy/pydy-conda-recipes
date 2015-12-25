@@ -14,18 +14,11 @@ build:
 requirements:
     build:
         - gcc
-        - libgcc
-        - python 2.7* # [py27]
-        - python 3.3* # [py33]
-        - python 3.4* # [py34]
-        - python 3.5* # [py35]
+        - python
         - setuptools
     run:
         - gcc
-        - python 2.7* # [py27]
-        - python 3.3* # [py33]
-        - python 3.4* # [py34]
-        - python 3.5* # [py35]
+        - python
 
 about:
   home: http://www.cython.org
