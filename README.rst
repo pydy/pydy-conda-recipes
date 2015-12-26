@@ -40,3 +40,28 @@ with a single command::
 Finally, each of these packages can be uploaded to anaconda with::
 
    $ anconda upload --user pydy pydy-X.X.X/build/<arch>/pydy-X.X.X-py27_0.tar.bz
+
+Metapackages
+============
+
+PyDy has a number of optional dependencies so we can create a metapackage that
+allows all of the optional dependencies to be easily installed. For example,
+this will create a PyDy 0.3.0 metapackage with all of the dependencies for
+Linux that will run the examples::
+
+   $ conda metapackage pydy-examples 0.3.0 \
+     --summary "A metapackage with the full dependencies required to run all of the PyDy examples." \
+     --dependencies "pydy ==0.3.0" "ipython-notebook 3.*" "cython >=0.20.1" "theano >=0.7.0" matplotlib
+
+After this is created, conda convert can be used to create a clone for each
+OS::
+
+   $ conda convert --platform all /home/<username>/<miniconda|anaconda>/conda-bld/linux-64/pydy-examples-0.3.0.tar.bz -o build
+
+I manually removed theano from the Windows and Mac versions from the json file
+in the tarball for now, since Anaconda doesn't host those packages.
+
+Now a fully working PyDy environment with all the optional dependencies can be
+created with::
+
+   $ conda create -c pydy -n pydy pydy-examples
