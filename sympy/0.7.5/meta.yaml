@@ -1,0 +1,83 @@
+package:
+  name: sympy
+  version: "0.7.5"
+
+source:
+  fn: sympy-0.7.5.tar.gz
+  url: https://pypi.python.org/packages/source/s/sympy/sympy-0.7.5.tar.gz
+  md5: 7de1adb49972a15a3dd975e879a2bea9
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+build:
+  string: py{{ py }}_0
+
+test:
+  # Python imports
+  imports:
+    - sympy
+    - sympy.assumptions
+    - sympy.assumptions.handlers
+    - sympy.calculus
+    - sympy.categories
+    - sympy.combinatorics
+    - sympy.concrete
+    - sympy.core
+    - sympy.crypto
+    - sympy.diffgeom
+    - sympy.external
+    - sympy.functions
+    - sympy.functions.combinatorial
+    - sympy.functions.elementary
+    - sympy.functions.special
+    - sympy.galgebra
+    - sympy.geometry
+    - sympy.integrals
+    - sympy.interactive
+    - sympy.liealgebras
+    - sympy.logic
+    - sympy.logic.algorithms
+    - sympy.logic.utilities
+    - sympy.matrices
+    - sympy.matrices.expressions
+    - sympy.mpmath
+    - sympy.mpmath.calculus
+    - sympy.mpmath.functions
+    - sympy.mpmath.libmp
+    - sympy.mpmath.matrices
+    - sympy.ntheory
+    - sympy.parsing
+    - sympy.physics
+    - sympy.physics.hep
+    - sympy.physics.mechanics
+    - sympy.physics.quantum
+    - sympy.physics.vector
+    - sympy.plotting
+    - sympy.plotting.intervalmath
+    - sympy.plotting.pygletplot
+    - sympy.polys
+    - sympy.polys.agca
+    - sympy.polys.domains
+    - sympy.printing
+    - sympy.printing.pretty
+    - sympy.series
+    - sympy.sets
+    - sympy.simplify
+    - sympy.solvers
+    - sympy.statistics
+    - sympy.stats
+    - sympy.strategies
+    - sympy.strategies.branch
+    - sympy.tensor
+    - sympy.unify
+    - sympy.utilities
+    - sympy.utilities.mathml
+
+about:
+  home: http://www.sympy.org
+  license: BSD License
+  summary: 'Computer algebra system (CAS) in Python'
