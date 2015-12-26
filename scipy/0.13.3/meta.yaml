@@ -18,7 +18,7 @@ requirements:
   run:
     - openblas
     - python
-    - numpy
+    - numpy x.x
 
 build:
   string: np{{ np }}py{{ py }}_0
