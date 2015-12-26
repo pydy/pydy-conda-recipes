@@ -11,12 +11,21 @@ requirements:
   build:
     - python
     - setuptools >=8.0
+    - sympy >=0.7.4.1 # [py2k]
+    - sympy >=0.7.5 # [py3k]
+    - numpy >=1.7 # [py2k]
+    - numpy >=1.9 # [py3k]
+    - scipy >=0.11 # [py2k]
+    - scipy >=0.14 # [py3k]
   run:
     - python
     - setuptools >=8.0
-    - sympy >=0.7.4.1
-    - numpy >=1.7
-    - scipy >=0.11
+    - sympy >=0.7.4.1 # [py2k]
+    - sympy >=0.7.5 # [py3k]
+    - numpy >=1.7 # [py2k]
+    - numpy >=1.9 # [py3k]
+    - scipy >=0.11 # [py2k]
+    - scipy >=0.14 # [py3k]
 
 build:
   number: 0
