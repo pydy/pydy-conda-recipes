@@ -1,0 +1,26 @@
+package:
+  name: version_information
+  version: "1.0.3"
+
+source:
+  fn: version_information-1.0.3.tar.gz
+  url: https://pypi.python.org/packages/source/v/version_information/version_information-1.0.3.tar.gz
+  md5: 1fc32b7f0be67fbba2ecdfade40ea116
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - ipython
+
+test:
+  imports:
+    - version_information
+
+about:
+  home: https://github.com/jrjohansson/version_information
+  license: BSD
+  summary: 'Version information for Jupyter notebooks'
