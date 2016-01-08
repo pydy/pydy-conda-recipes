@@ -1,0 +1,22 @@
+package:
+  name: pydy-examples
+  version: "0.3.1"
+
+requirements:
+  run:
+    - python
+    - pydy 0.3.1
+    - ipython-notebook 4.*
+    - ipywidgets
+    - version_information
+    - matplotlib
+    - cython 0.20.*
+
+build:
+  number: 0
+  string: py{{py}}_0
+
+about:
+  home: http://pydy.org
+  license: The BSD 3-Clause License
+  summary: 'A metapackage with the full dependencies required to run all of the PyDy examples.'
