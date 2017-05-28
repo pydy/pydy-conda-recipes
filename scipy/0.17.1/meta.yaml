@@ -1,0 +1,41 @@
+package:
+  name: scipy
+  version: 0.17.1
+
+source:
+  fn: scipy-0.17.1.tar.gz
+  url: https://pypi.python.org/packages/05/5e/973bf71cfa865d962a68893e35e366a0a7ac0b713bc398b4e584c1bed982/scipy-0.17.1.tar.gz
+  md5: 8987b9a3e3cd79218a0a423b21c8e4de
+
+requirements:
+  build:
+    - gcc
+    - libgfortran
+    - openblas
+    - python
+    - numpy x.x
+
+  run:
+    - openblas
+    - python
+    - numpy x.x
+
+build:
+  string: np{{ np }}py{{ py }}_0
+
+test:
+  imports:
+    - scipy
+    - scipy.integrate
+    - scipy.interpolate
+    - scipy.linalg
+    - scipy.optimize
+    - scipy.signal
+    - scipy.sparse
+    - scipy.special
+    - scipy.stats
+
+about:
+  home: https://www.scipy.org
+  summary: "SciPy: Scientific Library for Python"
+  license: BSD
