@@ -1,0 +1,24 @@
+package:
+  name: pydy-examples
+  version: "0.4.0"
+
+requirements:
+  run:
+    - python
+    - pydy 0.4.0
+    - notebook 4.*
+    - ipywidgets 4.*
+    - version_information
+    - matplotlib >=1.5
+    - cython >=0.23
+# Do not add theano here with a not win selector, as conda convert doesn't
+# honor the selectors. See this issue:
+# https://github.com/conda/conda-build/issues/721
+
+build:
+  number: 1
+
+about:
+  home: http://pydy.org
+  license: The BSD 3-Clause License
+  summary: 'A metapackage with the full dependencies required to run all of the PyDy examples.'
