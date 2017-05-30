@@ -1,0 +1,48 @@
+{% set name = "pydy" %}
+{% set version = "0.4.0" %}
+{% set md5 = "f95d189fb28d1eba10e4abfa2a08d790" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  md5: {{ md5 }}
+
+requirements:
+  build:
+    - python
+    - setuptools >=20.7.0
+    - sympy >=0.7.6.1
+    - numpy >=1.11.0
+    - scipy >=0.17.1
+  run:
+    - python
+    - setuptools >=20.7.0
+    - sympy >=0.7.6.1
+    - numpy >=1.11.0
+    - scipy >=0.17.1
+
+build:
+  number: 0
+  string: py{{py}}_0
+
+test:
+  requires:
+    - nose
+  imports:
+    - pydy
+    - pydy.codegen
+    - pydy.codegen.tests
+    - pydy.models
+    - pydy.system
+    - pydy.utils
+    - pydy.viz
+    - pydy.viz.tests
+
+about:
+  home: http://pydy.org
+  license: The BSD 3-Clause License
+  summary: 'Python tool kit for multi-body dynamics.'
