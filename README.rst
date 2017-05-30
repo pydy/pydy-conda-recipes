@@ -22,24 +22,29 @@ Install the needed packages::
 Create a new directory for the PyDy version and copy the files from the
 previous version (or use ``conda skeleton pypi pydy``)::
 
-   $ mkdir pydy-X.X.X
-   $ cp pydy-Y.Y.Y/* pydy-X.X.X/
+   $ cp -r pydy-Y.Y.Y/ pydy-X.X.X/
 
 Edit the files to reflect any new changes in to the package (especially
 dependency changes) and run conda build for each version of Python to build
 against::
 
-   $ conda build --python X.X pydy-X.X.X
+   $ conda build --python 2.7 pydy-X.X.X
+   $ conda build --python 3.5 pydy-X.X.X
+   $ conda build --python 3.6 pydy-X.X.X
 
 This will build the default package for your computer architecture. Since PyDy
 is a pure Python package we can generate the packages for other architectures
 with a single command::
 
-   $ conda convert --platform all /home/<username>/<miniconda|anaconda>/conda-bld/linux-64/pydy-X.X.X-py27_0.tar.bz -o pydy-X.X.X/build
+   $ conda convert --platform all /tmp/conda-builds/linux-64/pydy-X.X.X-py27_0.tar.bz -o build/pydy-X.X.X/
+
+The converted Windows binaries will be incorrect because the ``# [win]``
+selector is not honored by the convert command. This means that the PyWin32
+dependency must be manually added to each Windows binary before uploading.
 
 Finally, each of these packages can be uploaded to anaconda with::
 
-   $ anconda upload --user pydy pydy-X.X.X/build/<arch>/pydy-X.X.X-py27_0.tar.bz
+   $ find build/pydy-X.X.X -name *_0.tar.bz -exec anaconda upload --user pydy {} \;
 
 Metapackages
 ============
@@ -56,10 +61,7 @@ Linux that will run the examples::
 After this is created, conda convert can be used to create a clone for each
 OS::
 
-   $ conda convert --platform all /home/<username>/<miniconda|anaconda>/conda-bld/linux-64/pydy-examples-0.3.0.tar.bz -o build
-
-I manually removed theano from the Windows and Mac versions from the json file
-in the tarball for now, since Anaconda doesn't host those packages.
+   $ conda convert --platform all /tmp/conda-builds/linux-64/pydy-examples-X.X.X.tar.bz -o build/pydy-examples-X.X.X/
 
 Now a fully working PyDy environment with all the optional dependencies can be
 created with::
